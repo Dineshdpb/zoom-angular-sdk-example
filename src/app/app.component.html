@@ -1,0 +1,21 @@
+<main> <h1>Zoom Meeting SDK Sample Angular</h1>
+
+  <!-- For Component View -->
+  <div id="meetingSDKElement">
+    <!-- Zoom Meeting SDK Component View Rendered Here -->
+  </div>
+  <div>
+    <label >Meeting number</label>
+    <input type="number" name="Meeting number" (change)="doUpdateMeetingNumber($event.target.value)"/>
+    <br/>
+    <label >password</label>
+    <input type="text" name="password" (change)="doUpdatePassword($event.target.value)"/>
+  </div>
+  <button (click)="generateSignature()" style="border: 1px solid">Join Meeting</button>
+  <button (click)="generateSignature(true)" style="border: 1px solid">Join client Meeting</button>
+<button (click)="generateJWTToken()" >Generate JWT Token</button>  {{JWT}}
+<div>
+  <button (click)="createMeeting()">Create Meeting</button>
+</div>
+</main>
+
